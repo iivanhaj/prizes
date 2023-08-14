@@ -55,10 +55,8 @@ const App = () => {
         />
 
         {/* Text "PRIZES" */}
-        <div
-          className="absolute top-1/3 left-1/2 transform -translate-x-1/2 text-white font-bold"
-        >
-          PRIZES
+        <div className="text-above-image">
+          <span className="blue-text">PR</span><span className="white-text">IZES</span>
         </div>
       </div>
     </div>
