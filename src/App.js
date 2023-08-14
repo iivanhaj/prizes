@@ -20,19 +20,46 @@ const App = () => {
       {isDesktop ? (
         <div
           className="hidden md:block absolute inset-0 z-[-1]"
-          style={{ height: '100vh' }} 
+          style={{ height: '100vh' }}
         >
-          <img src="/images/desktop_img.png" alt="Desktop Background" className="object-cover w-full h-full" />
+          <img
+            src="/images/desktop_img.png"
+            alt="Desktop Background"
+            className="object-cover w-full h-full"
+          />
         </div>
       ) : (
         <div className="md:hidden absolute inset-0 z-[-1]">
-          <img src="/images/mobile_img.png" alt="Mobile Background" className="object-cover w-full h-full" />
+          <img
+            src="/images/mobile_img.png"
+            alt="Mobile Background"
+            className="object-cover w-full h-full"
+          />
         </div>
       )}
 
       {/* Centered image */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <img src="/images/prizes_screen.png" alt="Prizes" className="max-w-full max-h-full" />
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <img
+          src={isDesktop ? "/images/prizes_screen.png" : "/images/mobile_prizes.png"}
+          alt="Prizes"
+          className="max-w-full max-h-full"
+          style={{
+            position: 'absolute',
+            top: '60%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '80%',
+            height: '80%',
+          }}
+        />
+
+        {/* Text "PRIZES" */}
+        <div
+          className="absolute top-1/3 left-1/2 transform -translate-x-1/2 text-white font-bold"
+        >
+          PRIZES
+        </div>
       </div>
     </div>
   );
